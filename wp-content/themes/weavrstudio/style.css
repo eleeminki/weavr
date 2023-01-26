@@ -1,6 +1,20 @@
 /*
 Theme Name: Weavr Studio
 Author: Minki Eric Lee
-Description: Theme built for creative web studio.
+Description: Theme built for creative web studio/agency.
 Version: 1.0
 */
+
+/* Video Hero Section Home Page */
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+    padding: 0;
+}
+.elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: max-content;
+}
+
+/* Icon Box on Hero Section */
+
+.elementor-8 .elementor-element.elementor-element-d533ad0 {
+    top: -48%;
+}
