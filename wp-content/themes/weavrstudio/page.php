@@ -1,8 +1,10 @@
 <?php
 
 get_header();
-wp_nav_menu();
-if(have_posts()) : the_post();
-    the_content();
+if(have_posts()) :
+    while(have_posts()) :
+        the_post();
+        the_content();
+    endwhile;
 endif;
 get_footer();

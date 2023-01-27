@@ -1,29 +1,31 @@
+
 <?php
 
-
-function register_my_navmenu()
+function register_mynav()
 {
-    register_nav_menus(array(
-        'header' => __('Header', 'headernav'),
-        'footer' => __('Footer', 'footernav'),
-        '404' => __('404', '404nav')
-    ));
+    register_nav_menus(
+        array(
+        'header' => 'Header',
+        'footer' => 'Footer',
+        '404' => '404',
+        )
+    );
 }
 
-add_action('init', 'register_my_navmenu', 1);
 
-if (!function_exists('weavrstudio_setup')) {
-    function weavrstudio_setup()
+if (!function_exists('weavrsetup')) {
+    function weavrsetup()
     {
+        register_mynav();
         add_theme_support('post-thumbnails');
         add_theme_support('post-formats', array( 'aside', 'gallery', 'quote', 'image', 'video' ));
     }
 }
 
-function add_mytheme_scripts()
+function add_myscripts()
 {
     wp_enqueue_style('style', get_stylesheet_uri());
 }
 
-add_action('after_theme_setup', 'weavrstudio_setup', 0);
-add_action('wp_enqueue_scripts', 'add_mytheme_scripts');
+add_action('after_setup_theme', 'weavrsetup', 0);
+add_action('wp_enqueue_scripts', 'add_myscripts');
