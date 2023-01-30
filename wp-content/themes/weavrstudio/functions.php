@@ -29,3 +29,5 @@ function add_myscripts()
 
 add_action('after_setup_theme', 'weavrsetup', 0);
 add_action('wp_enqueue_scripts', 'add_myscripts');
+
+require(__DIR__.'/shortcodes/teammates.php');
