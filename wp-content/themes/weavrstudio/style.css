@@ -4,6 +4,10 @@ Author: Minki Eric Lee
 Description: Theme built for creative web studio/agency.
 Version: 1.0
 */
+fordford
+body {
+    margin-bottom: 0px;
+}
 
 /* Video Hero Section Home Page */
 .elementor-column-gap-default>.elementor-column>.elementor-element-populated {
@@ -13,12 +17,22 @@ Version: 1.0
     max-width: max-content;
 }
 
-/* Icon Box on Hero Section */
+/* Logo on Hero Section */
 
 .elementor-8 .elementor-element.elementor-element-d533ad0 {
     top: -48%;
 }
 
+/* Newsletter Section */
+
+.centerbox {
+    align-items: center;
+    gap: 40px !important;
+}
+
+ .directbox {
+    width: 64%;
+} 
 
 
 
